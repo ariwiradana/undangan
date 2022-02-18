@@ -18,4 +18,4 @@ export const IMAGES = [
   "P_20200223_105541_BF.jpg",
 ];
 
-export const URL_LOCATION = "https://goo.gl/maps/iZ2P8KZ6RdW7u1Vj9";
+export const URL_LOCATION = "https://maps.app.goo.gl/3NrkPGJBsJR7U7S29";
