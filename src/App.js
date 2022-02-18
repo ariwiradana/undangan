@@ -1,4 +1,4 @@
-import React, { useReducer, useState } from "react";
+import React, { useEffect, useReducer, useState } from "react";
 import { Body, Cover } from "./components/templates";
 import { AppReducers } from "./reducers";
 import { AppContext } from "./context";
