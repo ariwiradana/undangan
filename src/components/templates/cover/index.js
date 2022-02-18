@@ -109,13 +109,7 @@ const Cover = ({ setOverflow }) => {
                 ? "私たちの結婚式を祝うためにあなたを招待します"
                 : "kami mengundang Anda untuk merayakan pernikahan kami"}
             </p>
-          </div>
-          {!hide && (
-            <div
-              data-aos="fade-up"
-              data-aos-duration={1000}
-              data-aos-delay={2500}
-            >
+            {!hide && (
               <Link to="body" smooth spy duration={1000}>
                 <Button
                   title={
@@ -134,8 +128,8 @@ const Cover = ({ setOverflow }) => {
                   }}
                 />
               </Link>
-            </div>
-          )}
+            )}
+          </div>
         </div>
       </Container>
     </Container>
