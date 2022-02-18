@@ -5,6 +5,9 @@ import { AppContext } from "./context";
 import { backsound } from "./assets";
 
 const App = () => {
+  useEffect(() => {
+    document.title = "Mertayasa & Konami Wedding";
+  }, []);
   const [overflow, setOverflow] = useState(true);
   const [appState] = useState({
     lang: window.location.pathname.replace("/", ""),
