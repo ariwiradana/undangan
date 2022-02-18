@@ -22,14 +22,16 @@ const Cover = ({ setOverflow }) => {
   };
 
   return (
-    <Container className="w-full h-screen overflow-hidden bg-cover z-50 relative py-8">
-      <img
-        src="https://source.unsplash.com/random/1080x1920/?wedding"
-        className="w-full h-full object-cover grayscale bg-gray-600"
-        alt="cover-img"
-        loading="lazy"
-      />
-      <Container className="bg-black bg-opacity-50 w-full h-full absolute top-0 flex flex-col justify-center items-center">
+    <Container className="w-full h-screen overflow-hidden bg-cover z-50 relative">
+      <div className="w-full h-screen bg-cover overflow-hidden">
+        <img
+          src="https://source.unsplash.com/random/1080x1920/?wedding"
+          className="w-full h-full object-cover grayscale bg-gray-600"
+          alt="cover-img"
+          loading="lazy"
+        />
+      </div>
+      <Container className="bg-black bg-opacity-50 w-full h-full absolute top-0 flex flex-col justify-center items-center py-8">
         <div className="text-center">
           <p
             data-aos="fade-in"
