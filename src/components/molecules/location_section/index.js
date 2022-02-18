@@ -1,8 +1,11 @@
-import React from "react";
+import React, {useContext} from "react";
 import { URL_LOCATION } from "../../../config";
 import { Button } from "../../atoms";
+import {AppContext} from '../../../context'
 
 const LocationSection = () => {
+  const { state } = useContext(AppContext)
+  
   return (
     <div
       className="w-full flex flex-col items-center"
@@ -24,7 +27,13 @@ const LocationSection = () => {
       >
         <a href={URL_LOCATION} target="_blank">
           <Button
-            title="Petunjuk Arah ke Lokasi"
+            title={
+              state.lang === "en"
+                ? "Directions To The Location"
+                : state.lang === "jpn"
+                ? "場所への道順"
+                : "Petunjuk Arah Ke Lokasi"
+            }
             className="w-full flex justify-center rounded-md h-12 items-center"
           />
         </a>

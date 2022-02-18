@@ -19,7 +19,7 @@ const Body = ({ overflow }) => {
       {!overflow && <PlayButton className="fixed bottom-8 right-8" />}
       <Container>
         <div
-          className="flex flex-col justify-evenly"
+          className="flex flex-col justify-center py-6"
           style={{ height: HEIGHT }}
         >
           <div data-aos="fade-up" data-aos-duration={1000}>
@@ -45,6 +45,7 @@ const Body = ({ overflow }) => {
           </div>
           <div data-aos="fade-up" data-aos-duration={1000}>
             <ProfileSection
+              className="mt-4"
               alt="profile-img-female"
               src={profileFemale}
               nama="Konami Osawa"
