@@ -15,7 +15,7 @@ const Body = ({ overflow }) => {
   const HEIGHT = window.innerHeight;
 
   return (
-    <div id="body" className="w-full h-full relative">
+    <div id="body" className="w-full h-screen relative">
       {!overflow && <PlayButton className="fixed bottom-8 right-8" />}
       <Container>
         <div
@@ -64,7 +64,7 @@ const Body = ({ overflow }) => {
                   : "Kazuo Osawa & Kiyomi Osawa"
               }
             />
-            <div className="flex justify-center mt-2">
+            <div className="flex justify-center mt-4">
               <svg
                 className="fill-gray-400 w-20"
                 xmlns="http://www.w3.org/2000/svg"
