@@ -84,7 +84,7 @@ const Cover = ({ setOverflow }) => {
             className="w-full flex justify-center"
           >
             <svg
-              className="fill-white my-2 w-20"
+              className="fill-white w-20"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 92.83 37.39"
             >
