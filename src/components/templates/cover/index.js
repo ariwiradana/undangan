@@ -84,7 +84,7 @@ const Cover = ({ setOverflow }) => {
             className="w-full flex justify-center"
           >
             <svg
-              className="fill-white w-20"
+              className="fill-white w-20 h-14"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 92.83 37.39"
             >
@@ -100,7 +100,7 @@ const Cover = ({ setOverflow }) => {
             data-aos="fade-up"
             data-aos-duration={1000}
             data-aos-delay={2250}
-            className="text-white font-cormorant-garamond tracking-widest font-bold my-2 w-full flex justify-center"
+            className="text-white font-cormorant-garamond tracking-widest font-bold my-2 w-full flex flex-col items-center justify-center"
           >
             <p className="w-3/4 uppercase">
               {state.lang === "en"
