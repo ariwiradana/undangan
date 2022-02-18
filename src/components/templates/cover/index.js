@@ -22,7 +22,7 @@ const Cover = ({ setOverflow }) => {
   };
 
   return (
-    <Container className="w-full h-screen overflow-hidden bg-cover z-50 relative">
+    <Container className="w-full h-screen overflow-hidden bg-cover z-50 relative py-8">
       <img
         src="https://source.unsplash.com/random/1080x1920/?wedding"
         className="w-full h-full object-cover grayscale bg-gray-600"
