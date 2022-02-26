@@ -28,19 +28,13 @@ const Body = ({ overflow }) => {
               src={profileMale}
               nama="Ketut Mertayasa"
               ortuSubtitle={
-                state.lang === "en"
-                  ? "Son of"
-                  : state.lang === "jpn"
-                  ? "からの少年"
-                  : "Anak Laki-Laki dari"
+                <p>
+                  Son of<span className="mx-2">/</span>
+                  <span className="text-sm">からの少年</span>
+                  <span className="mx-2">/</span>Anak Laki-Laki dari
+                </p>
               }
-              ortuTitle={
-                state.lang === "en"
-                  ? "The late Mr. Putu Cakra & Mrs. Made Kerti"
-                  : state.lang === "jpn"
-                  ? "The late Mr. Putu Cakra & Mrs. Made Kerti"
-                  : "Putu Cakra (alm) & Made Kerti"
-              }
+              ortuTitle={"Putu Cakra & Made Kerti"}
             />
           </div>
           <div data-aos="fade-up" data-aos-duration={1000}>
@@ -50,51 +44,39 @@ const Body = ({ overflow }) => {
               src={profileFemale}
               nama="Konami Osawa"
               ortuSubtitle={
-                state.lang === "en"
-                  ? "Daughter of"
-                  : state.lang === "jpn"
-                  ? "の娘"
-                  : "Anak Perempuan dari"
+                <p>
+                  Daughter of<span className="mx-2">/</span>
+                  <span className="text-sm">の娘</span>
+                  <span className="mx-2">/</span>Anak Perempuan dari
+                </p>
               }
-              ortuTitle={
-                state.lang === "en"
-                  ? "Mr. Kazuo Osawa & Mrs. Kiyomi Osawa"
-                  : state.lang === "jpn"
-                  ? "Mr. Kazuo Osawa & Mrs. Kiyomi Osawa"
-                  : "Kazuo Osawa & Kiyomi Osawa"
-              }
+              ortuTitle={"Kazuo Osawa & Kiyomi Osawa"}
             />
           </div>
         </div>
       </Container>
       <Container className="p-8">
         <div data-aos="fade-up" data-aos-duration={1000}>
-          {state.lang === "en" ? (
-            <Description
-              top
-              title="Om Swastiastu"
-              desc="Without prejudice to respect, allow us to invite you, colleagues and friends to attend and give our blessing at the Manusa Yadnya Pawiwahan (Wedding) Ceremony for our children:"
-            />
-          ) : state.lang === "jpn" ? (
-            <Description
-              top
-              title="拝啓"
-              desc="春とはいえ、まだまだ寒い日が続きます。皆さまいかがお過ごしでしょうか？"
-            >
-              <p className="font-cormorant-garamond text-gray-600 italic">
-                <br></br>
-                さて、このたび私たちふたりは
-                結婚式を挙げることとなりました。つきましては、日頃お世話になっている皆さまに
-                感謝の気持ちを込めて ささやかな小宴を催したいと存じます。
-              </p>
-            </Description>
-          ) : (
-            <Description
-              top
-              title="Om Swastiastu"
-              desc="Atas Asung Kertha Wara Nugraha Ida Sang Hyang Widhi Wasa, Tanpa mengurangi rasa hormat, ijinkan kami mengundang Bapak/Ibu, rekan-rekan dan sahabat untuk hadir dan memberikan doa restu pada Upacara Manusa Yadnya Pawiwahan (Pernikahan) putra-putri kami:"
-            />
-          )}
+          <Description
+            top
+            title="Om Swastiastu"
+            desc="Without prejudice to respect, allow us to invite you, colleagues and friends to attend and give our blessing at the Manusa Yadnya Pawiwahan (Wedding) Ceremony for our children:"
+          />
+          <Description
+            className="mt-8"
+            desc="春とはいえ、まだまだ寒い日が続きます。皆さまいかがお過ごしでしょうか？"
+          >
+            <p className="font-cormorant-garamond text-gray-600 italic">
+              <br></br>
+              さて、このたび私たちふたりは
+              結婚式を挙げることとなりました。つきましては、日頃お世話になっている皆さまに
+              感謝の気持ちを込めて ささやかな小宴を催したいと存じます。
+            </p>
+          </Description>
+          <Description
+            className="mt-8"
+            desc="Atas Asung Kertha Wara Nugraha Ida Sang Hyang Widhi Wasa, Tanpa mengurangi rasa hormat, ijinkan kami mengundang Bapak/Ibu, rekan-rekan dan sahabat untuk hadir dan memberikan doa restu pada Upacara Manusa Yadnya Pawiwahan (Pernikahan) putra-putri kami:"
+          />
         </div>
       </Container>
       <Container className="pb-2">
@@ -105,35 +87,33 @@ const Body = ({ overflow }) => {
 
       <Container className="px-8">
         <div data-aos="fade-up" data-aos-duration={1000}>
-          {state.lang === "en" ? (
-            <>
-              <Description desc="It is an honor and happiness for us if you are willing to attend the Pawiwahan (Wedding) ceremony for our sons and daughters. Please understand, due to the pandemic conditions, we are sending invitations via online, limiting the time of invitations and according to health protocols, don't forget to wear masks and keep your distance." />
-            </>
-          ) : state.lang === "jpn" ? (
-            <Description desc="ご多用のところ、まことに恐縮ではございますが ぜひご出席くださいますようご案内申し上げます。">
-              <p className="font-cormorant-garamond text-gray-600 italic">
-                <br></br>
-                なお、カジュアルなパーティですので 平服でお越しください。
-                <br></br>
-                <br></br>
-                敬具
-                <br></br>
-                <br></br>
-                令和4年3月吉日
-                <br></br>
-                <br></br>
-                クツマルタヤサ＆コナミオサワ
-              </p>
-            </Description>
-          ) : (
-            <>
-              <Description desc="Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir di acara upacara Pawiwahan (Pernikahan) putra putri kami." />
-              <Description
-                className="mt-6"
-                desc="Mohon permakluman nya, berhubung kondisi pandemi, kami mengirim undangan via online, membatasi waktu undangan dan sesuai protokol kesehatan jangan lupa memakai MASKER serta jaga jarak."
-              />
-            </>
-          )}
+          <Description desc="It is an honor and happiness for us if you are willing to attend the Pawiwahan (Wedding) ceremony for our sons and daughters. Please understand, due to the pandemic conditions, we are sending invitations via online, limiting the time of invitations and according to health protocols, don't forget to wear masks and keep your distance." />
+          <Description
+            className="my-8"
+            desc="ご多用のところ、まことに恐縮ではございますが ぜひご出席くださいますようご案内申し上げます。"
+          >
+            <p className="font-cormorant-garamond text-gray-600 italic">
+              なお、カジュアルなパーティですので 平服でお越しください。
+              <br></br>
+              敬具
+              <br></br>
+              <br></br>
+              令和4年3月吉日
+              <br></br>
+              <br></br>
+              クツマルタヤサ＆コナミオサワ
+            </p>
+          </Description>
+          <>
+            <Description
+              className="mt-4"
+              desc="Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir di acara upacara Pawiwahan (Pernikahan) putra putri kami."
+            />
+            <Description
+              className="mt-4"
+              desc="Mohon permakluman nya, berhubung kondisi pandemi, kami mengirim undangan via online, membatasi waktu undangan dan sesuai protokol kesehatan jangan lupa memakai MASKER serta jaga jarak."
+            />
+          </>
         </div>
       </Container>
       <Container className="flex flex-col justify-center items-center">
@@ -182,17 +162,7 @@ const Body = ({ overflow }) => {
           </svg>
         </div>
         <div data-aos="fade-up" data-aos-duration={1000}>
-          <Description
-            className="mb-6"
-            top
-            title={
-              state.lang === "en"
-                ? "Map Location"
-                : state.lang === "jpn"
-                ? "地図の場所"
-                : "Peta Lokasi"
-            }
-          />
+          <Description className="mb-6" top title={"Map Location"} />
         </div>
         <LocationSection />
       </Container>

@@ -14,60 +14,54 @@ const PlaceAndTimeSection = () => {
       <Frame className="absolute top-4 right-4 w-24 fill-white" />
       <PlaceAndTime
         title={
-          state.lang === "en"
-            ? "Monday"
-            : state.lang === "jpn"
-            ? "月曜"
-            : "Senin"
+          <p>
+            Monday<span className="mx-2">/</span>
+            <span className="text-base">月曜</span>
+            <span className="mx-2">/</span>
+            <span>Senin</span>
+          </p>
         }
         caption={
-          state.lang === "en"
-            ? "7 / march / 2022"
-            : state.lang === "jpn"
-            ? "2022年3月7日"
-            : "7 / maret / 2022"
+          <p className="text-white font-tangerine text-3xl">7 / 03 / 2022</p>
         }
       />
       <PlaceAndTime
         title={
-          state.lang === "en" ? "Time" : state.lang === "jpn" ? "時間" : "Waktu"
+          <p>
+            Time<span className="mx-2">/</span>
+            <span className="text-base">時間</span>
+            <span className="mx-2">/</span>
+            <span>Waktu</span>
+          </p>
         }
         caption={
-          state.lang === "en"
-            ? "1pm - 10pm"
-            : state.lang === "jpn"
-            ? "午後1時〜午後10時"
-            : "13.00 - 22.00"
+          <p>
+            <p>1pm - 10pm</p>
+            <p className="text-base mt-1">午後1時〜午後10時</p>
+            <p>13.00 - 22.00</p>
+          </p>
         }
       />
       <PlaceAndTime
         title={
-          state.lang === "en"
-            ? "located at"
-            : state.lang === "jpn"
-            ? "にあります"
-            : "Lokasi"
+          <p>
+            Location<span className="mx-2">/</span>
+            <span className="text-base">にあります</span>
+            <span className="mx-2">/</span>
+            <span>Lokasi</span>
+          </p>
         }
-        caption={
-          state.lang === "en"
-            ? "Banjar, Buleleng, Bali"
-            : state.lang === "jpn"
-            ? "バンジャール、ブエレレン、バリ"
-            : "Banjar, Buleleng, Bali"
-        }
+        caption={"Jl. Raja Ida Made Rai"}
       />
-      <a
-        href={URL_LOCATION}
-        target="_blank"
-        class="flex justify-center mb-8"
-      >
+      <a href={URL_LOCATION} target="_blank" class="flex justify-center mb-8">
         <Button
           title={
-            state.lang === "en"
-              ? "Map Location"
-              : state.lang === "jpn"
-              ? "ロケーションマップ"
-              : "Peta Lokasi"
+            <p>
+              Map<span className="mx-2">/</span>
+              <span className="text-xs">地図</span>
+              <span className="mx-2">/</span>
+              <span>Peta</span>
+            </p>
           }
           icon={<IoIosSend />}
           className="border border-white py-1"

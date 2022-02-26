@@ -39,11 +39,7 @@ const Cover = ({ setOverflow }) => {
             data-aos-delay={1000}
             className="text-white font-cormorant-garamond text-xl italic"
           >
-            {state.lang === "en"
-              ? "The Wedding of"
-              : state.lang === "jpn"
-              ? "結婚式招待状"
-              : "Undangan Pernikahan"}
+            The Wedding of
           </p>
           <p
             data-aos="fade-up"
@@ -59,11 +55,10 @@ const Cover = ({ setOverflow }) => {
             data-aos-delay={1500}
             className="text-white font-cormorant-garamond text-2xl my-1 italic"
           >
-            {state.lang === "en"
-              ? "Monday"
-              : state.lang === "jpn"
-              ? "月曜"
-              : "Senin"}
+            Monday<span className="mx-2">/</span>
+            <span className="text-lg">月曜</span>
+            <span className="mx-2">/</span>
+            <span>Senin</span>
           </p>
           <p
             data-aos="fade-up"
@@ -71,11 +66,7 @@ const Cover = ({ setOverflow }) => {
             data-aos-delay={1750}
             className="text-white font-tangerine text-4xl"
           >
-            {state.lang === "en"
-              ? "7 / march / 2022"
-              : state.lang === "jpn"
-              ? "2022年3月7日"
-              : "7 / maret / 2022"}
+            7 / 03 / 2022
           </p>
           <div
             data-aos="fade-in"
@@ -102,22 +93,24 @@ const Cover = ({ setOverflow }) => {
             data-aos-delay={2250}
             className="text-white font-cormorant-garamond tracking-widest font-bold my-2 w-full flex flex-col items-center justify-center"
           >
-            <p className="w-3/4 uppercase">
-              {state.lang === "en"
-                ? "we invite you to celebrate our wedding"
-                : state.lang === "jpn"
-                ? "私たちの結婚式を祝うためにあなたを招待します"
-                : "kami mengundang Anda untuk merayakan pernikahan kami"}
+            <p className="w-3/4 uppercase font-light">
+              we invite you to celebrate our wedding
+            </p>
+            <p className="w-3/4 uppercase my-3 font-light">
+              私たちの結婚式を祝うためにあなたを招待します
+            </p>
+            <p className="w-3/4 uppercase font-light">
+              kami mengundang Anda untuk merayakan pernikahan kami
             </p>
             {!hide && (
               <Link to="body" smooth spy duration={1000}>
                 <Button
                   title={
-                    state.lang === "en"
-                      ? "Open Invitation"
-                      : state.lang === "jpn"
-                      ? "招待状を開く"
-                      : "Buka Undangan"
+                    <p>
+                      Open<span className="mx-2">/</span>
+                      <span className="text-sm">開いた</span>
+                      <span className="mx-2">/</span>Buka
+                    </p>
                   }
                   onClick={() => {
                     setOverflow(false);

@@ -49,68 +49,16 @@ const CountdownSection = () => {
       data-aos-duration={1000}
       className="flex flex-col justify-center items-center my-6"
     >
-      <Description
-        top
-        title={
-          state.lang === "en"
-            ? "Countdown Timer"
-            : state.lang === "jpn"
-            ? "カウントダウンタイマー"
-            : "Hitung Waktu Mundur"
-        }
-        subtitle={
-          state.lang === "en"
-            ? "Mertayasa & Konami Wedding"
-            : state.lang === "jpn"
-            ? "メルタヤサ＆コナミウェディング"
-            : "Pernikahan Mertayasa & Konami"
-        }
-      />
+      <Description top title={"Countdown Timer"} />
       <div
         data-aos="fade-up"
         data-aos-duration={1000}
         className="grid grid-cols-4 divide-x w-full"
       >
-        <Countdown
-          title={
-            state.lang === "en"
-              ? "Days"
-              : state.lang === "jpn"
-              ? "日々"
-              : "Hari"
-          }
-          number={countdown.days}
-        />
-        <Countdown
-          title={
-            state.lang === "en"
-              ? "Hours"
-              : state.lang === "jpn"
-              ? "時間"
-              : "Jam"
-          }
-          number={countdown.hours}
-        />
-        <Countdown
-          title={
-            state.lang === "en"
-              ? "Minutes"
-              : state.lang === "jpn"
-              ? "分"
-              : "Menit"
-          }
-          number={countdown.minutes}
-        />
-        <Countdown
-          title={
-            state.lang === "en"
-              ? "Seconds"
-              : state.lang === "jpn"
-              ? "秒"
-              : "Detik"
-          }
-          number={countdown.seconds}
-        />
+        <Countdown title={"Days"} number={countdown.days} />
+        <Countdown title={"Hours"} number={countdown.hours} />
+        <Countdown title={"Minutes"} number={countdown.minutes} />
+        <Countdown title={"Seconds"} number={countdown.seconds} />
       </div>
     </div>
   );
